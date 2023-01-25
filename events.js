@@ -1,5 +1,6 @@
 /********  Variablen **********/
 const btn = document.getElementById("trigBtn");
+// const btn = document.body.children[0];
 let appStatus =true;
 
 /********  Event-Listener **********/
@@ -9,12 +10,14 @@ window.addEventListener("load",toggleAppStatus);
 
 // Klick auf Btn  --> Zustand umschalten
 btn.addEventListener("click",toggleAppStatus);
+// btn.addEventListener("mouseenter", toggleAppStatus);
 
 /********  Business-Logic | Toggle **********/
 
 // Wechselschalter:  true = !false | false = !true
 function toggleAppStatus() {
     appStatus = !appStatus; 
+    // output(appStatus);
     updateView();
 }
 
